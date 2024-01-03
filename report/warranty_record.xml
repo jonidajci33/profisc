@@ -1,0 +1,17 @@
+<odoo>
+<!--        <record id="action_download_pdf_warranty" model="ir.actions.server">-->
+<!--            <field name="name">Download PDF</field>-->
+<!--            <field name="model_id" ref="model_res_partner"/>-->
+<!--            <field name="state">code</field>-->
+<!--            <field name="code">-->
+<!--                action = {-->
+<!--                    'type': 'ir.actions.report',-->
+<!--                    'report_name': 'profisc.report_custom_warranty_template',-->
+<!--                    'report_type': 'qweb-pdf',-->
+<!--                    'model': 'res.partner',-->
+<!--                    'report_file': 'profisc.report_custom_warranty_template',-->
+<!--                    'data': {'model': 'res.partner', 'id': record.id, 'report_type': 'pdf'}-->
+<!--                }-->
+<!--            </field>-->
+<!--        </record>-->
+</odoo>

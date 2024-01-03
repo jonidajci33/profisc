@@ -1,0 +1,98 @@
+<odoo>
+        <template id="report_custom_warranty_template">
+                    <t t-call="web.html_container">
+                        <style>
+                            .ft10{font-size:110px;font-family:Times;color:#7e7e7e;}
+                            .ft1{font-size:22px;font-family:Times;color:#000000;font-weight:bold;}
+                            .ft2{font-size:18px;font-family:Times;color:#000000}
+                        </style>
+
+                       <div>
+                            <p style="position:absolute; top:116px; left:257px; white-space:nowrap; opacity:0.3; -webkit-transform: rotate(-45deg);
+                                                                                                                    -moz-transform: rotate(-45deg);
+                                                                                                                    -o-transform: rotate(-45deg);
+                                                                                                                    transform: rotate(-45deg); " class="ft10">Shpresa AL</p>
+                        </div>
+
+                        <div>
+                            <p style="position:absolute; top:316px; left:257px; white-space:nowrap; opacity:0.3; -webkit-transform: rotate(-45deg);
+                                                                                                                    -moz-transform: rotate(-45deg);
+                                                                                                                    -o-transform: rotate(-45deg);
+                                                                                                                    transform: rotate(-45deg); " class="ft10">Shpresa AL</p>
+                        </div>
+
+                        <div>
+                            <p style="position:absolute; top:534px; left:257px; white-space:nowrap; opacity:0.3; -webkit-transform: rotate(-45deg);
+                                                                                                                    -moz-transform: rotate(-45deg);
+                                                                                                                    -o-transform: rotate(-45deg);
+                                                                                                                    transform: rotate(-45deg); " class="ft10">Shpresa AL</p>
+                        </div>
+
+
+                                <div style="text-align: center; color:#000080; font-size: 30px;font-weight: bold; ">
+                                    <span>SHPRESA AL COMPUTER</span><br/>
+                                </div>
+                                <div style="text-align: center; color:#000080; font-size: 40px;font-style: italic; font-weight: bold ">
+                                    <span>Kushtet e garancise: Fat. nr.1968262</span>
+                                </div>
+                                <div style="padding: 13px">
+                                <p><div class="ft1" style="margin-left:30px;font-style:italic">Garancia nuk mbulon difektet e shkaktuara nga:<br/></div>
+
+                                <div class="ft2" style="margin-left: 30px">
+                                    1.Demtime fizike nga keqperdorimi ose transportimi i papershtatshem perplasjet goditjet thyerjet apo kontakti me lengje te ndryshme<br/>
+                                    2.Demtimet per shkak te mbitensionit elektrik ose perdorimi me tension jashte kufijve te autorizuar nga faqja zyrtare e prodhuesit<br/>
+                                    3.perdorimi ne ambjente te papershtatshme (pluhur,lageshtire,dridhje), fusha fuqishme manjetike<br/>
+                                    4.Demtimi nga viruset keqperdorimi modifikimi formatimi i sistemit te operimit apo instalimi i programeve te pa autorizuara nga faqja zyrtare e prodhuesit<br/>
+                                    5.Demtimet e shkaktuara nga lidhja e paisjes me aksesore te pa autorizuar nga faqja zyrtare e prodhuesit<br/>
+                                    6.Demtimet eventuale te softeve aplikative dhe te informacioneve qe klienti ka rezervuar ne paisje apo per demet eventuale qe mund ti shkaktohen klientit apo paleve te treta ne aktivitetin e tyre, nga mosfunksionimi i paisjes, edhe kur ky mosfunksionim eshte per shkak te difekteve qe mbulohen nga Garancia<br/></div>
+                                    <div style="font-style: italic;font-size:20px;font-family:Times;font-weight: bold;margin-left:40px">(Eshte ne detyren e plote te Klientit disponimi i mundesive te ruajtjes dhe rikuperimit te informacioneve te rezervuara ne paisjet qe ai perdor)</div>
+                                    <br/>
+
+                                    <div class="ft1" style="margin-left:30px;font-style:italic">Garancia mbulohet kur:<br/></div>
+
+                                    <div class="ft2" style="margin-left:70px">
+                                    1.Klienti paraqitet me faturen e blerjes dhe fleten e garancise brenda afatit kohor te percaktuar ne faturen e shitjes.<br/>
+                                    2.Klienti paraqitet me paisjen e pa hapur ose e pa bere servis nga persona te pa autorizuar nga Shpresa Al.<br/></div>
+
+                                    <div class="ft1" style="margin-left:30px;font-style:italic">Garancia mbulohet duke:<br/></div>
+
+                                        <div class="ft2" style="margin-left:70px">
+                                    1.Riparuar (falas) ose duke e kthyer ne gjendje pune paisjen difektoze me probleme fabrikimi<br/>
+                                    2.Nderruar paisjen difektoze me ekuivalente kur riparimi eshte i pamundur<br/>
+                                        </div>
+
+                                        <div class="ft1" style="margin-left:30px;font-style:italic">Garancia mbulohet ne afatet kohore si me poshte:<br/></div>
+
+                                    <div class="ft2" style="margin-left:80px">
+                                        1. Diagnostifikimi konstatimi i defektit si dhe njoftimi i klientit realizohet nga 1 deri ne 2 dite pune<br/>
+                                        2. Nderrimi i pjeses difektoze ose i paisjes realizohet nga 1 deri ne 21 dite pune<br/>
+                                        3. Kur klienti jep miratimin ne kohe ne rast marreveshje 2 paleshe<br/>
+                                    </div>
+
+                                    <div class="ft1" style="margin-left:30px;font-style:italic">Garancia nuk mbulon pjeset dhe aksesoret si me poshte:<br/></div>
+
+                                    <div class="ft2" style="margin-left:70px">
+                                    1.Bazen e karikimit<br/>
+                                    2.Baterine<br/>
+                                    3.Karikuesin<br/>
+                                    4.Fishen e karikimit<br/>
+                                    5.Pultin e televizorit<br/>
+                                    6.Dorezen e PlayStation<br/>
+                                    7.Kapaket e ndryshem<br/>
+                                    8. Ekranin e Smartphone ( pixelat / djegiet nga shtypja / shtypjet / thyerjet / njollat ne ekran<br/>
+                                    9. N.q.s telefoni eshte perdorur mbi 3 muaj dhe ai shfaq nje problem i cili nuk mund te riparohet, atehere atij i zbritet 20% nga cmimi aktual i shitjes<br/>
+                                    </div></p>
+                                    </div>
+
+                                    <div style="margin-left:30px;font-size:24px;font-family:Times;color:#000000;font-weight: bold;font-style: italic ">
+                                        <p>KUJDES: Fatura dhe fleta e garancise duhen ruajtur per aq kohe sa zgjat garancia</p>
+                                    </div>
+                                    <div style="margin-left:50px;font-size:22px;font-family:Times;color:#000000;">
+                                        <p>Pranoj kushte e garancise dhe jam plotesisht dakort me to</p>
+                                    </div>
+                                <div style="margin-left:30px;font-size:24px;font-family:Times;color:#000000;font-weight: bold;font-style: italic">
+                                    <p>Emer/mbiemer/firme:<t t-foreach="docs" t-as="o"><span style="color:blue; font-family: Brush Script MT, Times, coursive;font-size: 40px; margin-left: 10px" t-esc="o.name"/></t></p>
+                                </div>
+                </t>
+        </template>
+</odoo>

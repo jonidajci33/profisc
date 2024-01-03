@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="profisc_account_move_extension" model="ir.ui.view">
+            <field name="name">Profisc:: account_move_extension</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="profisc_cis_type" widget="selection"
+                           string="CIS Type"
+                           readonly="profisc_status_control==3"
+                    />
+                    <field name="profisc_status_control" widget="selection"
+                           invisible="profisc_cis_type not in ['-1','1']"
+                           required="profisc_cis_type !='0'"
+                           string="Status Control"/>
+                    <field name="profisc_profile_id" widget="selection"
+                           readonly="profisc_status_control=='3'"
+                           invisible="profisc_cis_type=='0'"
+                           required="profisc_cis_type !='0'"
+                           string="Profile ID"/>
+                    <field name="profisc_invoice_type" widget="selection"
+                           readonly="profisc_status_control=='3'"
+                           invisible="profisc_cis_type=='0'"
+                           required="profisc_cis_type !='0'"
+                           string="Invoice Type"/>
+
+                    <field name="profisc_bu_code" widget="selection"
+                           readonly="profisc_status_control=='3'"
+                           invisible="profisc_cis_type=='0'"
+                           required="profisc_cis_type !='0'"
+                           string="Bu Code"/>
+                    <field name="profisc_self_invoice_type" string="Self Invoice Type"
+                           invisible="profisc_profile_id!='P12'"
+                           required="profisc_profile_id =='P12'"
+                    />
+                    <field name="profisc_reverse_charge" string="Reverse Charge"
+                           invisible="profisc_profile_id != 'P12'"
+                    />
+                    <field name="profisc_tcr_code" widget="selection"
+                           readonly="profisc_status_control=='3'"
+                           invisible="profisc_cis_type=='0'"
+                           required="profisc_cis_type !='0'"
+                           string="TCR Code"/>
+                </xpath>
+                <xpath expr="//sheet/group" position="after">
+                    <hr/>
+                    <button name="send_to_profisc" type="object" class="btn btn-odoo"
+                            groups="account.group_account_invoice"
+                            invisible="state != 'posted' or profisc_fisc_status in ('Y')"
+                    >
+                        <i class="fa fa-bolt" style="color:white"/>
+                        Fiskalizo
+                    </button>
+                    <button name="get_fisc_pdf" type="object" groups="account.group_account_invoice"
+                            invisible="state!='posted' or profisc_fic is False or profisc_fisc_downloaded is True"
+                    >
+                        <i class="fa fa-file-pdf-o" style="color:red"/>
+                        Fisc PDF
+                    </button>
+                    <button name="get_e_invoice_pdf" type="object" groups="account.group_account_invoice"
+                            invisible="state!='posted' or profisc_eic is False or profisc_einvoice_downloaded is True"
+                    >
+                        <i class="fa fa-file-pdf-o" style="color:green"/>
+                        e-Invoice PDF
+                    </button>
+                </xpath>
+
+                <xpath expr="//field[@name='invoice_date']" position="after">
+                    <field name="profisc_reference_invoice_date" string="Reference Invoice Date"
+                           invisible="profisc_profile_id!='P10'"
+                    />
+                    <field name="profisc_reference_invoice_iic" string="Reference Invoice IIC"
+                           invisible="profisc_profile_id!='P10'"
+                    />
+                    <field name="profisc_subseq" string="Subseq"
+                           invisible="profisc_cis_type=='0'"
+                           readonly="profisc_status_control=='3'"
+                    />
+                    <field name="profisc_start_date" string="Start Date"
+                           invisible="profisc_profile_id != 'P2'"
+                    />
+                    <field name="profisc_end_date" string="End Date"
+                           invisible="profisc_profile_id != 'P2'"
+                    />
+                </xpath>
+                <xpath expr="//div[@name='journal_div']" position="after">
+                    <field name="profisc_ubl_id" string="UBL ID"
+                           invisible="profisc_cis_type=='0'"
+                           readonly="profisc_status_control=='3'"
+                    />
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Fiskalizimi">
+                        <group colspan="2">
+                            <group>
+                                <field name="profisc_iic" string="iic"/>
+                                <field name="profisc_fic" string="fic"/>
+                                <field name="profisc_eic" string="eic"/>
+                                <field name="profisc_qr_code" string="QR Code"/>
+                                <field widget="image" options="{'size': [0, 90]}" name="profisc_qr_code_check"
+                                       string="Qr Code" force_save="True" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="profisc_fisc_status" string="Fisc Status"/>
+                                <field name="profisc_fisc_downloaded" string="Fiscal Downloaded"/>
+                                <field name="profisc_einvoice_downloaded" string="E-Invoice Downloaded"/>
+                                <field name="profisc_fic_error_code" string="FIC Error Code"/>
+                                <field name="profisc_fic_error_description" string="FIC Error Description"/>
+                                <field name="profisc_eic_error_code" string="EIC Error Code"/>
+                                <field name="profisc_eic_error_description" string="EIC Error Description"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                    <page string="Attachments" name="studio_page_uh2O8">
+                        <group name="studio_group_uh2O8">
+                            <group name="studio_group_uh2O8_left"/>
+                            <group name="studio_group_uh2O8_right"/>
+                        </group>
+                        <field name="attachment_ids"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

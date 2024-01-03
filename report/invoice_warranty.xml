@@ -1,0 +1,13 @@
+<template id="warranty_report_template" report_type="qweb-pdf">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <div class="page">
+                <h2>Warranty Certificate</h2>
+                <p>Product: <t t-esc="doc.name"/></p>
+                <p>Warranty Period: <t t-esc="doc.get_warranty_details()['period']"/></p>
+                <p>Terms: <t t-esc="doc.get_warranty_details()['terms']"/></p>
+            </div>
+        </t>
+    </t>
+</template>
+

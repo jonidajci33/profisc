@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- QWeb Reports -->
+        <record id="report_warranty" model="ir.actions.report">
+            <field name="name">Warranty</field>
+            <field name="model">res.partner</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">profisc.report_custom_warranty_template</field>
+            <field name="report_file">profisc.report_custom_warranty_template</field>
+        </record>
+    </data>
+</odoo>
+
+<!--<odoo>-->
+<!--        <report-->
+<!--                id="report_warranty"-->
+<!--                model="res.company"-->
+<!--                string="Warranty Report"-->
+<!--                report_type="qweb-pdf"-->
+<!--                name="profisc.report_custom_warranty_template"-->
+<!--                file="profisc.report_custom_warranty_template"-->
+<!--            />-->
+<!--</odoo>-->
